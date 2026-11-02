@@ -264,7 +264,7 @@
       <div class="cat-tile-body"><strong>Diamond Art</strong><span>1 item</span></div>
     </a><a class="cat-tile" href="#/shirts">
       <div class="placeholder"><div class="icon" aria-hidden="true">✦</div></div>
-      <div class="cat-tile-body"><strong>T-Shirts</strong><span>1 item</span></div>
+      <div class="cat-tile-body"><strong>T-Shirts</strong><span>2 items</span></div>
     </a></div>
 </div>
 <section class="home-section"><div class="wrap"><div class="section-head"><h2>How ordering works</h2></div>
@@ -445,7 +445,10 @@
         </a></div><div class="tile-grid cat-grid" data-label="Diamond Art" data-cat="diamond"><a class="tile" href="#/item/diamond-art">
           <div class="placeholder"><div class="icon" aria-hidden="true">✦</div><strong>Diamond Art</strong></div>
           <div class="tile-body"><strong>Diamond Art</strong><span class="tile-price">Price on request</span><span class="badge soon">Coming soon</span></div>
-        </a></div><div class="tile-grid cat-grid" data-label="T-Shirts" data-cat="shirts"><a class="tile" href="#/item/custom-t-shirts">
+        </a></div><div class="tile-grid cat-grid" data-label="T-Shirts" data-cat="shirts"><a class="tile" href="#/item/don-t-stop-believin-t-shirt">
+          <img src="https://ljcraftycreations.github.io/lj-crafty-creations/stills/santa-shirt-1.jpg" alt="Don&#x27;t Stop Believin&#x27; T-Shirt" class="">
+          <div class="tile-body"><strong>Don&#x27;t Stop Believin&#x27; T-Shirt</strong><span class="tile-price">$12</span></div>
+        </a><a class="tile" href="#/item/custom-t-shirts">
           <div class="placeholder"><div class="icon" aria-hidden="true">✦</div><strong>Custom T-Shirts</strong></div>
           <div class="tile-body"><strong>Custom T-Shirts</strong><span class="tile-price">Price on request</span><span class="badge soon">Coming soon</span></div>
         </a></div>
@@ -716,6 +719,19 @@
             </div>
           </div>
         </div>
+      </section><section class="view detail-view" id="item-don-t-stop-believin-t-shirt" data-cat="shirts">
+        <div class="wrap">
+          <a class="back" href="#/shirts">&larr; Back to T-Shirts</a>
+          <div class="detail-layout">
+            <div class="detail-media"><div class="detail"><div class="gallery-main"><img src="https://ljcraftycreations.github.io/lj-crafty-creations/stills/santa-shirt-1.jpg" alt="Don&#x27;t Stop Believin&#x27; T-Shirt" class=""></div><div class="thumbs" role="group" aria-label="More photos"><button type="button" class="active" data-full="https://ljcraftycreations.github.io/lj-crafty-creations/stills/santa-shirt-1.jpg"><img src="https://ljcraftycreations.github.io/lj-crafty-creations/stills/santa-shirt-1.jpg" alt="Santa shirt view"></button><button type="button" data-full="https://ljcraftycreations.github.io/lj-crafty-creations/stills/santa-shirt-2.jpg"><img src="https://ljcraftycreations.github.io/lj-crafty-creations/stills/santa-shirt-2.jpg" alt="Santa shirt view"></button><button type="button" data-full="https://ljcraftycreations.github.io/lj-crafty-creations/stills/santa-shirt-3.jpg"><img src="https://ljcraftycreations.github.io/lj-crafty-creations/stills/santa-shirt-3.jpg" alt="Santa shirt view"></button></div></div></div>
+            <div class="detail-info">
+              <div class="card-top"><h2>Don&#x27;t Stop Believin&#x27; T-Shirt</h2><span class="badge">Only one</span></div>
+              <p class="desc">Vintage Santa face on a bright blue Gildan Heavy Cotton tee — "Don't Stop Believin'" in green and red glitter-style lettering with buffalo plaid and leopard accents. Size small — only one available.</p>
+              <p class="detail-meta">Only one · Size small · $12 · Gildan Heavy Cotton tee.</p>
+              <div class="price-row"><span class="price">$12</span><span class="price-note">Size small</span></div><button class="btn btn-primary order-btn v2-order-btn shirt-order-btn" type="button" data-cup="Don't Stop Believin' T-Shirt (Size Small)">Order this shirt</button>
+            </div>
+          </div>
+        </div>
       </section><section class="view detail-view" id="item-custom-t-shirts" data-cat="shirts">
         <div class="wrap">
           <a class="back" href="#/shirts">&larr; Back to T-Shirts</a>
@@ -974,6 +990,11 @@ L&amp;J Crafty Creations · Hats $30–$48 depending on chain · Tumblers $25 ·
   document.querySelectorAll('.cup-order-btn').forEach(function(btn){
     btn.addEventListener('click', function(){
       preset('Bluetooth Speaker Tumbler', 'Not a hat', 40, btn.getAttribute('data-cup'));
+    });
+  });
+  document.querySelectorAll('.shirt-order-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      preset('Custom T-Shirt', 'Not a hat', 12, btn.getAttribute('data-cup'));
     });
   });
   document.querySelectorAll('.v2-ask-btn').forEach(function(btn){
