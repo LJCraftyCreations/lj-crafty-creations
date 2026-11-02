@@ -270,7 +270,7 @@
 <section class="home-section"><div class="wrap"><div class="section-head"><h2>How ordering works</h2></div>
       <ol class="steps"><li><b>Pick your piece</b> — tap a category, find the one you love.</li>
       <li><b>Send your order</b> — copy the order summary and send it to us. We confirm price, details, and timing with you directly.</li>
-      <li><b>Pay &amp; we get to work</b> — pay with Cash App, Venmo, or Zelle once your order is confirmed. Shipping is added on top if you need it mailed.</li></ol>
+      <li><b>Pay &amp; we get to work</b> — pay with Cash App, Venmo, or Zelle once your order is confirmed. Shipping is a flat $5 if you need it mailed.</li></ol>
       <p>Payment is only sent <b>after</b> we confirm your order with you. Chains are removable — order one hat with a chain and swap it between hats.</p>
       <p><b>Ways to pay:</b> Cash App <b>$laurawhite1970</b> · Venmo <b>@Jamiewhite97</b> · Zelle <b>850 4471004</b></p></div></section>
 <section class="home-section"><div class="wrap"><div class="section-head"><h2>Contact us</h2></div>
@@ -780,7 +780,7 @@ L&amp;J Crafty Creations · Hats $30–$48 depending on chain · Tumblers $25 ·
     var name = document.getElementById('inpName').value.trim();
     var notes = document.getElementById('inpNotes').value.trim();
     var amt = currentAmount();
-    var total = (amt !== null) ? ('$' + amt + ' (before any shipping)') : 'Price confirmed with you after you send this';
+    var total = (amt !== null) ? ('$' + amt + ' (+ $5 flat shipping if mailed)') : 'Price confirmed with you after you send this';
     var lines = ['L&J Crafty Creations \u2014 Order',
       'Date: ' + prettyDate(document.getElementById('inpDate').value),
       'Item: ' + item, 'Chain: ' + chainSel,
