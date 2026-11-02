@@ -373,8 +373,13 @@
 })();
 </script>
 <section class="home-section"><div class="wrap"><div class="section-head"><h2>Contact us</h2></div>
-      <p>Questions, a custom idea, or an order to place — reach us here and we&rsquo;ll get right back to you.</p>
+      <p>Need help ordering from the website? Reach us here and we&rsquo;ll get right back to you. Please contact us only if you need assistance with an order from the website.</p>
       <p><b>Email:</b> LJCraftyCreations2023@outlook.com<br><b>Call or text Laura Collins:</b> 850 4471004</p></div></section>
+<section class="home-section"><div class="wrap"><div class="section-head"><h2>Tip Jar 💖</h2></div>
+      <p>Love what we make? Leave a tip to support Laura &amp; Jamie&rsquo;s little shop — every bit helps us keep creating!</p>
+      <p><b>Cash App:</b> $laurawhite1970 · <b>Venmo:</b> @Jamiewhite97 · <b>Zelle:</b> 850 4471004 · <b>PayPal:</b> scan the code under How ordering works</p>
+      <p style="font-size:.88rem">Tips are a gift to support our shop, not payment for an order — orders still go through the website.</p>
+</div></section>
 
 </section>
 <section class="view" id="view-category"><div class="wrap">
@@ -714,7 +719,7 @@
   <section id="order">
     <div class="order-box">
       <h2>Build your order</h2>
-      <p>Pick a hat, choose your chain and payment, add any custom notes — then copy the summary and send it to us. Nothing is charged here; we confirm with you first.</p>
+      <p>Pick your piece, add the name for your cup if it&rsquo;s personalized, choose payment — then copy the summary and send it to us. Nothing is charged here; we confirm with you first.</p>
       <div class="order-grid">
         <div>
           <label for="selItem">Item</label>
@@ -728,6 +733,10 @@
             <option value="Custom T-Shirt">Custom T-Shirt (price on request)</option>
             <option value="Something custom">Something custom — describe below</option>
           </select>
+        </div>
+        <div>
+          <label for="inpCupName">Name to put on your cup (for personalized cups)</label>
+          <input id="inpCupName" type="text" placeholder="Leave blank if your cup has no name">
         </div>
         <div>
           <label for="selChain">Hat chain</label>
@@ -879,6 +888,7 @@ L&amp;J Crafty Creations · Hats $30–$48 depending on chain · Tumblers $25 ·
     var pay = document.getElementById('selPay').value;
     var name = document.getElementById('inpName').value.trim();
     var notes = document.getElementById('inpNotes').value.trim();
+    var cupName = document.getElementById('inpCupName').value.trim();
     var amt = currentAmount();
     var total = (amt !== null) ? ('$' + amt + ' (+ $5 flat shipping if mailed)') : 'Price confirmed with you after you send this';
     var lines = ['L&J Crafty Creations \u2014 Order',
@@ -888,6 +898,7 @@ L&amp;J Crafty Creations · Hats $30–$48 depending on chain · Tumblers $25 ·
       'Payment: ' + document.getElementById('selPaid').value,
       'Order stage: ' + document.getElementById('selStage').value];
     if (name) lines.push('Name: ' + name);
+    if (cupName) lines.push('Name for cup: ' + cupName);
     if (notes) lines.push('Notes: ' + notes);
     document.getElementById('summary').textContent = lines.join('\n');
   }
@@ -898,7 +909,7 @@ L&amp;J Crafty Creations · Hats $30–$48 depending on chain · Tumblers $25 ·
   ['selItem','selChain'].forEach(function(id){
     document.getElementById(id).addEventListener('change', function(){ syncAmount(); updateSummary(); });
   });
-  ['selItem','selChain','selPay','inpName','inpNotes','inpDate','inpAmount','selStage','selPaid'].forEach(function(id){
+  ['selItem','selChain','selPay','inpName','inpCupName','inpNotes','inpDate','inpAmount','selStage','selPaid'].forEach(function(id){
     var el = document.getElementById(id);
     el.addEventListener('input', updateSummary);
     el.addEventListener('change', updateSummary);
